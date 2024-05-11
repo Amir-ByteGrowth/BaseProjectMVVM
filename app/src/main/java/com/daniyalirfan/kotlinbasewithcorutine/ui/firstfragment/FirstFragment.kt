@@ -23,8 +23,7 @@ import com.daniyalirfan.kotlinbasewithcorutine.databinding.FirstFragmentBinding
 import com.daniyalirfan.kotlinbasewithcorutine.ui.firstfragment.adapter.PostsRecyclerAdapter
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.first_fragment.*
+
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -63,7 +62,6 @@ class FirstFragment : BaseFragment<FirstFragmentBinding, FirstViewModel>() {
 
     override fun subscribeToViewLiveData() {
         super.subscribeToViewLiveData()
-
         mViewModel.btnClick.observe(this, Observer {
 
             //observing data from edittext
@@ -95,7 +93,7 @@ class FirstFragment : BaseFragment<FirstFragmentBinding, FirstViewModel>() {
 
         adapter = PostsRecyclerAdapter(postsList, object : PostsRecyclerAdapter.ClickItemListener {
             override fun onClicked(position: Int) {
-                Navigation.findNavController(recycler_posts)
+                Navigation.findNavController(mViewDataBinding.recyclerPosts)
                     .navigate(R.id.action_firstFragment_to_secondFragment)
             }
 
@@ -104,8 +102,8 @@ class FirstFragment : BaseFragment<FirstFragmentBinding, FirstViewModel>() {
 
         })
 
-        recycler_posts.layoutManager = LinearLayoutManager(requireContext())
-        recycler_posts.adapter = adapter
+       mViewDataBinding. recyclerPosts.layoutManager = LinearLayoutManager(requireContext())
+        mViewDataBinding.recyclerPosts.adapter = adapter
 
     }
 
@@ -129,7 +127,7 @@ class FirstFragment : BaseFragment<FirstFragmentBinding, FirstViewModel>() {
                 Resource.Status.ERROR -> {
                     hideProgressBar()
 
-                    Snackbar.make(recycler_posts!!, it.message!!, Snackbar.LENGTH_SHORT)
+                    Snackbar.make(mViewDataBinding.recyclerPosts!!, it.message!!, Snackbar.LENGTH_SHORT)
                         .show()
 
                 }

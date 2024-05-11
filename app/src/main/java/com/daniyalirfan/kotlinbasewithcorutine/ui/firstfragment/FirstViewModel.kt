@@ -1,7 +1,7 @@
 package com.daniyalirfan.kotlinbasewithcorutine.ui.firstfragment
 
 import androidx.databinding.ObservableField
-import androidx.hilt.lifecycle.ViewModelInject
+//import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
