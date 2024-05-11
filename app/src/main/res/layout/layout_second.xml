@@ -2,10 +2,9 @@
 <layout>
 
     <data>
-
         <variable
             name="viewModel"
-            type="com.daniyalirfan.kotlinbasewithcorutine.ui.secondfragment.SecondViewModel" />
+            type="com.amiritdev.kotlinbasewithcorutine.ui.secondfragment.SecondViewModel" />
 
     </data>
 

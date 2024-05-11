@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.daniyalirfan.kotlinbasewithcorutine.ui.activity.MainViewModel" />
+            type="com.amiritdev.kotlinbasewithcorutine.ui.activity.MainViewModel" />
 
     </data>
 

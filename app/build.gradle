@@ -11,7 +11,7 @@ plugins {
 android {
 
     defaultConfig {
-        applicationId "com.daniyalirfan.kotlinbasewithcorutine"
+        applicationId "com.amiritdev.kotlinbasewithcorutine"
         minSdkVersion 26
         compileSdk 34
         targetSdkVersion 34
@@ -54,7 +54,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"https://watya.info/api/production/v1/\"")
         }
     }
-    namespace 'com.daniyalirfan.kotlinbasewithcorutine'
+    namespace 'com.amiritdev.kotlinbasewithcorutine'
 }
 
 dependencies {
